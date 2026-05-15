@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+requests
+pydantic
+PyQt5
+python-docx
+python-pptx
+reportlab
+pypdf
+python-multipart
