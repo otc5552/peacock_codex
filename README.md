@@ -1,54 +1,16 @@
-# PeacockAI Studio
+# React + Vite
 
-واجهة ذكاء اصطناعي محلية بأسلوب ChatGPT مع محرر أكواد ومساحة مشاريع.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## قدرات الملفات
+Currently, two official plugins are available:
 
-- إنشاء ملفات `README.md`.
-- إنشاء ملفات Word بصيغة `.docx`.
-- إنشاء عروض PowerPoint بصيغة `.pptx`.
-- إنشاء ملفات PDF بصيغة `.pdf`.
-- رفع ملفات نصية و`docx` و`pptx` و`pdf` وقراءتها داخل البرنامج.
-- تعديل الملفات النصية وحفظها.
-- ضغط ملفات ومجلدات إلى ZIP.
-- فك ضغط ملفات ZIP وأرشيفات Python المدعومة.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## قدرات النماذج والوسائط
+## React Compiler
 
-- فهم نية المستخدم تلقائياً: محادثة، بحث، توليد صورة، توليد فيديو، إنشاء ملفات، أو صناعة تطبيق.
-- إضافة نماذج صور وفيديو مفتوحة المصدر عبر تبويب `النماذج`.
-- دعم Stable Diffusion WebUI محلياً من خلال `http://127.0.0.1:7860/sdapi/v1/txt2img`.
-- دعم أي API خارجي يرجع رابط ملف أو Base64 عبر endpoints `/media/providers`.
-- زر `+` في واجهة الشات يفتح: رفع ملف، فتح كاميرا، توليد صورة، توليد فيديو، بحث تفصيلي، إنشاء ملف، وصناعة تطبيق.
-- البحث التفصيلي يعمل عبر Brave أو SerpAPI عند ضبط مفاتيح API، أو DuckDuckGo HTML كبديل.
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-متغيرات البحث الاختيارية:
+## Expanding the ESLint configuration
 
-```powershell
-$env:PEACOCK_SEARCH_PROVIDER="brave"
-$env:BRAVE_SEARCH_API_KEY="..."
-```
-
-## تشغيل واجهة سطح المكتب
-
-```powershell
-python -m pip install -r requirements.txt
-python main.py
-```
-
-## تشغيل الباكند
-
-```powershell
-python -m pip install -r requirements.txt
-uvicorn backend.app:app --reload
-```
-
-## تشغيل واجهة الويب
-
-```powershell
-cd frontend
-npm install
-npm run dev
-```
-
-واجهة الويب تتصل افتراضياً بـ `http://127.0.0.1:8000`. يمكن تغيير المسار عبر `VITE_API_URL`.
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
